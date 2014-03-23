@@ -87,4 +87,28 @@ describe("Exercise 2.2", function(){
 			expect(sentence).toBe('dog lazy the over jumped fox brown quick the');
 		})
 	})
-})
+});
+
+describe("Exercise 2.3", function(){
+
+	describe("The monthTemperatures object", function(){
+
+		it('stores each week in a 2d array', function(){
+			expect(true).toBe(false);
+		});
+
+		it('exposes a function to return the monthly average', function(){
+			expect(true).toBe(false);
+		});
+
+		it("exposes a function to return a specific week's average", function(){
+			expect(true).toBe(false);
+		})
+
+		it("exposes a function to return all of the week's averages", function(){
+			expect(true).toBe(false);
+		})
+
+	})
+
+});
