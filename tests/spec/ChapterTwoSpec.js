@@ -93,20 +93,34 @@ describe("Exercise 2.3", function(){
 
 	describe("The monthTemperatures object", function(){
 
+		beforeEach(function(){
+			month = new monthTemperatures();
+			week1 = [89,90,90,93,91,88,95];
+			week2 = [55,67,87,43,56,78,56];
+			week3 = [77,88,104,105,98,43,95];
+			week4 = [101,100,98,99,100,96,99];
+			month.addWeek(week1);
+			month.addWeek(week2);
+			month.addWeek(week3);
+			month.addWeek(week4);
+		})
+
 		it('stores each week in a 2d array', function(){
-			expect(true).toBe(false);
+			expect(month.temperatures[1]).toEqual(week2);
 		});
 
 		it('exposes a function to return the monthly average', function(){
-			expect(true).toBe(false);
+			expect(month.average()).toEqual(84);
 		});
 
 		it("exposes a function to return a specific week's average", function(){
-			expect(true).toBe(false);
+			var week3Average = month.averageForTheWeek(month.temperatures[2]);
+			expect(week3Average).toEqual(87);
 		})
 
 		it("exposes a function to return all of the week's averages", function(){
-			expect(true).toBe(false);
+			var averagesPerWeek = month.averageForEveryWeek();
+			expect(averagesPerWeek).toEqual([90,63,87,99]);
 		})
 
 	})
