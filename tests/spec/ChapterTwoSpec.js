@@ -126,3 +126,32 @@ describe("Exercise 2.3", function(){
 	})
 
 });
+
+describe("Exercise 2.4", function(){
+	describe("Create an object that", function(){
+
+		beforeEach(function(){
+			lettersToWord = new LettersToWord();
+		})
+
+		it("stores individual letters in an array", function(){
+			lettersToWord.addLetter('Y');
+			lettersToWord.addLetter('a');
+			lettersToWord.addLetter('y');
+			expect(lettersToWord.letters).toContain('a');
+			expect(lettersToWord.letters[2]).toBe('y');
+		})
+
+		it("returns the stored characters as a single word", function(){
+			lettersToWord.addLetter('H');
+			lettersToWord.addLetter('e');
+			lettersToWord.addLetter('y');
+			lettersToWord.addLetter('D');
+			lettersToWord.addLetter('u');
+			lettersToWord.addLetter('d');
+			lettersToWord.addLetter('e');
+			var word = lettersToWord.concatLetters();
+			expect(word).toEqual('HeyDude');
+		})
+	})
+})
